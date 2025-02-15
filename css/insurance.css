@@ -1,0 +1,338 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto", serif;
+}
+:root{
+  --primary-color: rgb(168,245,251);
+  --primary-color-dark: rgb(87,225,251);
+  --text-dark:#111827;
+  --text-light:#6b7280;
+  --white:#ffffffff;
+}
+.containers{
+  width: 1518px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 1525px;
+  padding: 20px 2%;
+  background: var(--primary-color-dark);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  transition: 1s;
+}
+.nav_logo{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 35px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  animation-name: logoanima;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.navbar,.dropdown{
+  position: relative;
+  animation-name: navanima;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.navbar a,.dropdown a{
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  transition: all 1s;
+  margin-left: 20px;
+}
+.navbar a:hover{
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+#menu-icon{
+  display: none;
+  font-size: 3.6rem;
+  color: white;
+  cursor: pointer;
+}
+.btns{
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+  margin-right: 10px;
+  position: relative;
+  animation-name: rights;
+  animation-duration: 1.9s;
+  animation-timing-function: ease-out;
+}
+.btns a{
+  font-size: 1.1rem;
+  color:black;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btns:hover{
+  background-color: rgb(99, 231, 241);
+}
+
+.menusbar{
+    display: grid;
+    row-gap: 10px;
+    background-color: var(--text-dark);
+    width: 170px;
+    border-radius: 10px;
+    margin-top: 1px;
+    text-align: center;
+    display: none;
+    padding: 5px;
+    position: absolute;
+    z-index: 300;
+}
+.menusbar a{
+  text-decoration: none;
+    padding: 5px;
+    color: var(--white);
+}
+.dropdown:hover .menusbar{
+  display: grid;
+}
+.dropdown .menusbar a:hover{
+  text-decoration: underline;
+}
+
+.dropdown a:hover{
+  scale: 1.1;
+}
+.dropdown{
+  height: 35px;
+}
+.letter{
+  display: inline-block;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  animation: bounce 2s ease-in-out ;
+  transform-origin: bottom;
+}
+.letter:nth-child(1){
+  animation-delay: 0.1s;
+}
+.letter:nth-child(2){
+  animation-delay: 0.2s;
+}
+.letter:nth-child(3){
+  animation-delay: 0.3s;
+}
+.letter:nth-child(4){
+  animation-delay: 0.4s;
+}
+.letter:nth-child(5){
+  animation-delay: 0.5s;
+}
+.letter:nth-child(6){
+  animation-delay: 0.6s;
+}
+.letter:nth-child(7){
+  animation-delay: 0.7s;
+}
+.letter:nth-child(8){
+  animation-delay: 0.8s;
+}
+.letter:nth-child(9){
+  animation-delay: 0.8s;
+}
+
+#menu-icon{
+  display: none;
+  font-size: 3.6rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+@keyframes rights{
+  0%{
+    left: 200px;
+  }
+  100%{
+   left: 0px;
+  }
+}
+
+@keyframes bounce{
+  0%, 80%, 100%{
+    transform: translateY(0px);
+  }
+  30%{
+    transform: translateY(-30px);
+  }
+  60%{
+    transform: translateY(10px);
+  }
+}
+
+
+@keyframes logoanima{
+  0%{
+    top: -100px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes navanima{
+  0%{
+    top: 100px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+
+.form1{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.form2>h3{
+  font-size: 40px;
+  color: black;
+  font-weight: 700;
+}
+.formlo{
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+   width: 90%;
+   margin-top: 700px;
+}
+.formcontent{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.formcontainer1{
+  width: 60%;
+  height: 700px;
+  background-color: #111827;
+}
+.formcontainer1 h3{
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+  color: white;
+  font-weight: 700;
+}
+.formcontainer2{
+  width: 40%;
+  height: 700px;
+  padding: 20px;
+  background-color: rgb(241, 241, 241);
+}
+form label{
+  font-size: 25px;
+  color: var(--white);
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.name input{
+ width: 350px;
+ padding: 15px;
+ border-radius: 10px;
+ margin-left: 30px;
+ border: none;
+}
+.email input{
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 30px;
+  border: none;
+ }
+ .mob input{
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 30px;
+  border: none;
+ }
+ .add textarea{
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 30px;
+  border: none;
+ }
+ .minform1{
+  width: 100%;
+  padding-left: 20px;
+ }
+ .minform1 h3{
+  font-size: 30px;
+  text-align: center;
+ }
+ .minform1 label{
+  font-size: 21px;
+  margin: 10px 15px 10px 0px;
+ }
+ .minform2{
+  width: 100%;
+  font-size: 30px;
+  padding: 20px;
+ }
+ .minform1text textarea{
+  width: 460px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+ }
+ 
+ .minform2 h3{
+  text-align: center;
+ }
+ .icon span{
+  font-size: 20px;
+ }
+ .icon i{
+  margin-right: 10px;
+  margin-top:10px ;
+ }
+ .socicon{
+  margin: 10px;
+ }
+ .formcontainer{
+  height: 860px;
+ }
+ .btn1{
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 72px 310px;
+ }

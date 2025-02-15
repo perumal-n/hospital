@@ -1,0 +1,363 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto", serif;
+}
+:root{
+  --primary-color: rgb(168,245,251);
+  --primary-color-dark: rgb(87,225,251);
+  --text-dark:#111827;
+  --text-light:#6b7280;
+  --white:#ffffffff;
+}
+.containers{
+  width: 1550px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 20px 2%;
+  background: var(--primary-color-dark);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  transition: 1s;
+  
+}
+.logo{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 45px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  animation-name: logoanima;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.navbar,.dropdown{
+  position: relative;
+  animation-name: navanima;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.navbar a,.dropdown a{
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  transition: all 1s;
+  margin-left: 20px;
+}
+.navbar a:hover{
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+#menu-icon{
+  display: none;
+  font-size: 3.6rem;
+  color: white;
+  cursor: pointer;
+}
+.btns{
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+  margin-right: 10px;
+  position: relative;
+  animation-name: rights;
+  animation-duration: 1.9s;
+  animation-timing-function: ease-out;
+}
+.btns a{
+  font-size: 1.1rem;
+  color:black;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btns:hover{
+  background-color: rgb(99, 231, 241);
+}
+
+.menusbar{
+    display: grid;
+    row-gap: 10px;
+    background-color: var(--text-dark);
+    width: 170px;
+    border-radius: 10px;
+    margin-top: 1px;
+    text-align: center;
+    display: none;
+    padding: 5px;
+    position: absolute;
+    z-index: 300;
+}
+.menusbar a{
+  text-decoration: none;
+    padding: 5px;
+    color: var(--white);
+}
+.dropdown:hover .menusbar{
+  display: grid;
+}
+.dropdown .menusbar a:hover{
+  text-decoration: underline;
+}
+
+.dropdown a:hover{
+  scale: 1.1;
+}
+.dropdown{
+  height: 35px;
+}
+.letter{
+  display: inline-block;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  animation: bounce 2s ease-in-out ;
+  transform-origin: bottom;
+}
+.letter:nth-child(1){
+  animation-delay: 0.1s;
+}
+.letter:nth-child(2){
+  animation-delay: 0.2s;
+}
+.letter:nth-child(3){
+  animation-delay: 0.3s;
+}
+.letter:nth-child(4){
+  animation-delay: 0.4s;
+}
+.letter:nth-child(5){
+  animation-delay: 0.5s;
+}
+.letter:nth-child(6){
+  animation-delay: 0.6s;
+}
+.letter:nth-child(7){
+  animation-delay: 0.7s;
+}
+.letter:nth-child(8){
+  animation-delay: 0.8s;
+}
+.letter:nth-child(9){
+  animation-delay: 0.8s;
+}
+#menu-icon{
+  display: none;
+  font-size: 3.6rem;
+  color: white;
+  cursor: pointer;
+}
+
+#review-container{
+  margin-top: 150px;
+}
+.review-container-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px double var(--text-dark);
+  padding: 5px;
+  margin-left: 50px;
+}
+.review-container-img+i{
+  font-size: 35px;
+  height: 60px;
+  width: 60px;
+  background-image: linear-gradient(to left,rgb(255, 0, 170),rgb(0, 136, 255));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  top: 110px;
+  right: 100px;
+  color: var(--text-dark);
+}
+.review-container-button{
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--text-dark);
+  margin: 15px 155px;
+}
+.re1{
+  position: relative;
+  animation-delay: 1s;
+  animation: 1s rev1  linear;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.re2{
+  position: relative;
+  animation-delay: 2s;
+  animation: 1s rev2  linear;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.re3{
+  position: relative;
+  animation-delay: 1s;
+  animation: 1s rev3  linear;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes rev1 {
+  from {
+      opacity: 0;
+      left: -30px;
+  }
+
+  to {
+      opacity: 1;
+      left: 0px;
+ }
+}
+@keyframes rev2 {
+  from {
+      opacity: 0;
+      top: 100px;
+  }
+
+  to {
+      opacity: 1;
+      top: 0px;
+ }
+}
+@keyframes rev3 {
+  from {
+      opacity: 0;
+      right: -30px;
+  }
+
+  to {
+      opacity: 1;
+      right: 0px;
+ }
+}
+
+@keyframes rights{
+  0%{
+    left: 200px;
+  }
+  100%{
+   left: 0px;
+  }
+}
+
+@keyframes bounce{
+  0%, 80%, 100%{
+    transform: translateY(0px);
+  }
+  30%{
+    transform: translateY(-30px);
+  }
+  60%{
+    transform: translateY(10px);
+  }
+}
+
+
+@keyframes logoanima{
+  0%{
+    top: -100px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes navanima{
+  0%{
+    top: 100px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@media (width < 900px){
+  html{
+    font-size: 20px;
+  }
+  #menu-icon{
+    display: block;
+    font-size: 25px;
+  }
+  .header {
+    width: 100%;
+}
+.headers{
+  margin-bottom: 100px;
+}
+  .navbar{
+    position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        top: 100%;
+        left: -100%;
+        width: 45%;
+        padding: 1rem 4%;
+        background-color: rgb(0, 171, 228, 0.5);
+        box-shadow: 0 .5rem 1rem gray;
+        animation: none;
+        transition: 1s ease;
+        transition-delay: .25s;
+        border-radius: 10px;
+  }
+  .dropdown {
+    height: 60px;
+}
+.imro{
+  margin-left: 215px;
+}
+.review-container-button{
+  margin-left: 30px;
+}
+  .bx-menu:hover~.navbar{
+    left: 50%;
+  }
+  .navbar a{
+    display: block;
+    font-size: 30px;
+    width: 100px;
+    margin: 10px 10px;
+    padding-left: 10px;
+  }
+  .menusbar{
+    display: none;
+  }
+}
